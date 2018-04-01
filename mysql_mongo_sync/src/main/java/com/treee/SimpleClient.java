@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map; 
 import java.util.HashMap;
+import java.util.Properties;
 
 import com.alibaba.otter.canal.client.CanalConnector;
 import com.alibaba.otter.canal.client.CanalConnectors;
@@ -30,6 +31,12 @@ import java.io.FileInputStream;
 
 //写入文件
 import java.io.FileWriter;
+
+//kafka
+import kafka.javaapi.producer.Producer;
+import kafka.producer.KeyedMessage;
+import kafka.producer.ProducerConfig;
+import com.treee.kafka.kafkaProducer; //我的生产者
 
 public class SimpleClient {
     public static String data_dir = "data"; //数据保存路径
@@ -103,7 +110,9 @@ public class SimpleClient {
                 String row_data = header_str + row_str + "\"before\":" +before + ",\"after\":" + after + ",\"time\":\"" + timeStr +"\"}";
                 dataArray.add(row_data);   
                 save_data_logs(row_data);
-                System.out.println(row_data);
+                kafkaProducer.send(row_data);
+		//push_kafka(row_data);
+		System.out.println(row_data);
             }  
             
             
@@ -196,5 +205,23 @@ public class SimpleClient {
             System.out.println("write file error!");
         }
     }
-
+    private static void push_kafka(String msg){
+	String TOPIC = "test"; //kafka创建的topic
+	//String CONTENT = "This is a single message"; //要发送的内容
+	String BROKER_LIST = "127.0.0.1:9092,127.0.0.1:9092,127.0.0.1:9092"; //broker的地址和端口
+	String SERIALIZER_CLASS = "kafka.serializer.StringEncoder"; // 序列化类
+	Properties props = new Properties();
+	props.put("serializer.class", SERIALIZER_CLASS);
+	props.put("metadata.broker.list", BROKER_LIST);
+	ProducerConfig config = new ProducerConfig(props);
+	Producer<String, String> producer = new Producer<String, String>(config);
+	
+        System.out.println("=========== send start =======");
+	//Send messages.
+	List<KeyedMessage<String,String>> messages =
+		new ArrayList<KeyedMessage<String, String>>();
+	messages.add(new KeyedMessage<String, String>
+		(TOPIC, "push_kafka_test"));
+        System.out.println("=========== send success =======");
+    }
 }

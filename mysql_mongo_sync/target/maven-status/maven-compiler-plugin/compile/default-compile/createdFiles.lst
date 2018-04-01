@@ -1,2 +1,3 @@
 com/treee/SimpleClient.class
 com/treee/App.class
+com/treee/kafka/kafkaProducer.class

@@ -1,0 +1,10 @@
+{"binlog":"mysql-bin.000007:352","db":"Test","table":"websites","eventType":"INSERT","before":"","after":{"alexa":"8","country":"USA","id":"8","name":"web008","url":"www.web008.com"},"time":"2018-04-01 20:39:25"}
+{"binlog":"mysql-bin.000007:652","db":"Test","table":"websites","eventType":"DELETE","before":"","after":{"alexa":"8","country":"USA","id":"8","name":"web008","url":"www.web008.com"},"time":"2018-04-01 20:47:06"}
+{"binlog":"mysql-bin.000007:652","db":"Test","table":"websites","eventType":"DELETE","before":"","after":{"alexa":"9","country":"USA","id":"9","name":"web009","url":"www.web009.com"},"time":"2018-04-01 20:47:06"}
+{"binlog":"mysql-bin.000007:652","db":"Test","table":"websites","eventType":"DELETE","before":"","after":{"alexa":"10","country":"USA","id":"10","name":"web010","url":"www.web010.com"},"time":"2018-04-01 20:47:06"}
+{"binlog":"mysql-bin.000007:1024","db":"Test","table":"websites","eventType":"INSERT","before":"","after":{"alexa":"8","country":"USA","id":"8","name":"web008","url":"www.web008.com"},"time":"2018-04-01 20:58:22"}
+{"binlog":"mysql-bin.000007:1324","db":"Test","table":"websites","eventType":"INSERT","before":"","after":{"alexa":"8","country":"USA","id":"9","name":"web008","url":"www.web008.com"},"time":"2018-04-01 21:03:57"}
+{"binlog":"mysql-bin.000007:1624","db":"Test","table":"websites","eventType":"INSERT","before":"","after":{"alexa":"8","country":"USA","id":"10","name":"web008","url":"www.web008.com"},"time":"2018-04-01 21:08:16"}
+{"binlog":"mysql-bin.000007:1924","db":"Test","table":"websites","eventType":"INSERT","before":"","after":{"alexa":"8","country":"USA","id":"11","name":"web008","url":"www.web008.com"},"time":"2018-04-01 21:09:11"}
+{"binlog":"mysql-bin.000007:2224","db":"Test","table":"websites","eventType":"INSERT","before":"","after":{"alexa":"8","country":"USA","id":"12","name":"web008","url":"www.web008.com"},"time":"2018-04-01 21:20:33"}
+{"binlog":"mysql-bin.000007:2524","db":"Test","table":"websites","eventType":"INSERT","before":"","after":{"alexa":"8","country":"USA","id":"13","name":"web008","url":"www.web008.com"},"time":"2018-04-01 21:23:11"}
