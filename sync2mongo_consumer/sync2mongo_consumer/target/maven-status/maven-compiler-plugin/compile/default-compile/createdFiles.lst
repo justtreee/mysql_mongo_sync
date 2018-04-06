@@ -1,4 +1,6 @@
 com/treee/consumer/ConsumerGroup.class
 com/treee/App.class
+com/treee/mongo/connectMongo.class
 com/treee/consumer/ConsumerMsgTask.class
+com/treee/mongo/sync2mongo.class
 com/treee/consumer/ConsumerDemo.class
