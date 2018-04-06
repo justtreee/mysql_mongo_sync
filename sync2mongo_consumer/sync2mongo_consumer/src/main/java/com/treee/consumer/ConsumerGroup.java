@@ -6,7 +6,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 public class ConsumerGroup {
-   public static void main(String[] args) throws Exception {
+   public static void main(String[] args) throws Exception{
       /* if(args.length < 2){
          System.out.println("Usage: consumer <topic> <groupname>");
          return;
@@ -27,14 +27,16 @@ public class ConsumerGroup {
       KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
       
       consumer.subscribe(Arrays.asList(topic));
-      System.out.println("Subscribed to topic " + topic);
+      System.out.println("=====================Subscribed to topic " + topic);
       int i = 0;
          
       while (true) {
          ConsumerRecords<String, String> records = consumer.poll(100);
             for (ConsumerRecord<String, String> record : records)
-               System.out.printf("offset = %d, key = %s, value = %s\n", 
+            {   System.out.printf("====\n=====\n======offset = %d, key = %s, value = %s\n===========\n============\n", 
                record.offset(), record.key(), record.value());
-      }     
+		
+	    }
+     }     
    }  
 }
