@@ -1,1 +1,4 @@
+com/treee/consumer/ConsumerGroup.class
 com/treee/App.class
+com/treee/consumer/ConsumerMsgTask.class
+com/treee/consumer/ConsumerDemo.class

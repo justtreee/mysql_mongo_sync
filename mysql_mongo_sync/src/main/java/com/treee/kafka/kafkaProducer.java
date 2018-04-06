@@ -16,9 +16,9 @@ public class kafkaProducer {
         Properties props = new Properties();  
         props.put("serializer.class", SERIALIZER_CLASS);
         props.put("metadata.broker.list", BROKER_LIST);
-	props.put("key.serializer.class", "kafka.serializer.StringEncoder");
-	props.put("partitioner.class", "com.treee.kafka.PartitionerDemo");
-    	props.put("request.required.acks", "1");
+//	props.put("key.serializer.class", "kafka.serializer.StringEncoder");
+//	props.put("partitioner.class", "com.treee.kafka.PartitionerDemo");
+//    	props.put("request.required.acks", "1");
 
         ProducerConfig config = new ProducerConfig(props);
         Producer<String, String> producer = new Producer<String, String>(config);
