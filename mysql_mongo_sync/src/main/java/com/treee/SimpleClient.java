@@ -111,39 +111,9 @@ public class SimpleClient {
                 dataArray.add(row_data);   
                 save_data_logs(row_data);
                 kafkaProducer.send(row_data);
-		//push_kafka(row_data);
-		System.out.println(row_data);
+//		System.out.println(row_data);
             }  
             
-            
-            
-            
-            //========================================
-            /* RowChange rowChange = RowChange.parseFrom(entry.getStoreValue());
-            for (RowData rowData : rowChange.getRowDatasList()) {
-		System.out.print("{");
-		switch (rowChange.getEventType()) {
-                case INSERT:
-                    System.out.print("\"eventType\" : \"INSERT\",");
-                case UPDATE:
-                    System.out.print("\"eventType\" : \"UPDATE\",");
-		    printColumns(rowData.getAfterColumnsList());
-
-                    if ("retl_buffer".equals(entry.getHeader().getTableName())) {
-                        String tableName = rowData.getAfterColumns(1).getValue();
-                        String pkValue = rowData.getAfterColumns(2).getValue();
-                        System.out.println("SELECT * FROM " + tableName + " WHERE id = " + pkValue);
-                    }
-                    break;
-
-                case DELETE:
-                    System.out.print("\"eventType\" : \"DELETE\",");
-                    printColumns(rowData.getBeforeColumnsList());
-                    break;
-
-                default:
-                    break;
-                } */
             
         }
     }
@@ -205,23 +175,5 @@ public class SimpleClient {
             System.out.println("write file error!");
         }
     }
-    private static void push_kafka(String msg){
-	String TOPIC = "test"; //kafka创建的topic
-	//String CONTENT = "This is a single message"; //要发送的内容
-	String BROKER_LIST = "127.0.0.1:9092,127.0.0.1:9092,127.0.0.1:9092"; //broker的地址和端口
-	String SERIALIZER_CLASS = "kafka.serializer.StringEncoder"; // 序列化类
-	Properties props = new Properties();
-	props.put("serializer.class", SERIALIZER_CLASS);
-	props.put("metadata.broker.list", BROKER_LIST);
-	ProducerConfig config = new ProducerConfig(props);
-	Producer<String, String> producer = new Producer<String, String>(config);
-	
-        System.out.println("=========== send start =======");
-	//Send messages.
-	List<KeyedMessage<String,String>> messages =
-		new ArrayList<KeyedMessage<String, String>>();
-	messages.add(new KeyedMessage<String, String>
-		(TOPIC, "push_kafka_test"));
-        System.out.println("=========== send success =======");
-    }
+
 }

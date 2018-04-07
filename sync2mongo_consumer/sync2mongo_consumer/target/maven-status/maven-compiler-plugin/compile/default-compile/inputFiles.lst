@@ -1,6 +1,3 @@
 /root/mymaven/mysql_mongo_sync/sync2mongo_consumer/sync2mongo_consumer/src/main/java/com/treee/consumer/ConsumerGroup.java
 /root/mymaven/mysql_mongo_sync/sync2mongo_consumer/sync2mongo_consumer/src/main/java/com/treee/App.java
-/root/mymaven/mysql_mongo_sync/sync2mongo_consumer/sync2mongo_consumer/src/main/java/com/treee/consumer/ConsumerDemo.java
-/root/mymaven/mysql_mongo_sync/sync2mongo_consumer/sync2mongo_consumer/src/main/java/com/treee/mongo/sync2mongo.java
-/root/mymaven/mysql_mongo_sync/sync2mongo_consumer/sync2mongo_consumer/src/main/java/com/treee/consumer/ConsumerMsgTask.java
 /root/mymaven/mysql_mongo_sync/sync2mongo_consumer/sync2mongo_consumer/src/main/java/com/treee/mongo/connectMongo.java
