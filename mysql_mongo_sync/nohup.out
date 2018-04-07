@@ -1166,3 +1166,5 @@
 [2018-04-07 16:25:17,745] INFO [GroupCoordinator 0]: Member consumer-1-9288e4d6-c778-477e-a01e-d197762760ab in group grouptest has failed, removing it from the group (kafka.coordinator.group.GroupCoordinator)
 [2018-04-07 16:25:17,746] INFO [GroupCoordinator 0]: Preparing to rebalance group grouptest with old generation 17 (__consumer_offsets-33) (kafka.coordinator.group.GroupCoordinator)
 [2018-04-07 16:25:17,746] INFO [GroupCoordinator 0]: Group grouptest with generation 18 is now empty (__consumer_offsets-33) (kafka.coordinator.group.GroupCoordinator)
+[2018-04-07 16:28:56,289] INFO [GroupMetadataManager brokerId=0] Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2018-04-07 16:38:56,289] INFO [GroupMetadataManager brokerId=0] Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
